@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: prod
+  config:
+    import: optional:configserver:http://config-server:8888
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      enabled: true

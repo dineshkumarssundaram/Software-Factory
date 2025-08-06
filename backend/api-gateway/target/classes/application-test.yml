@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: api-gateway
+  profiles:
+    active: test
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      enabled: true

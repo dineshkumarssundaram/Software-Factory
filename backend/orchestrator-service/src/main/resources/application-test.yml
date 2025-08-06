@@ -1,0 +1,14 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: orchestrator-service
+  profiles:
+    active: test
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      enabled: true
